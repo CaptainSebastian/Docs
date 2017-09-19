@@ -220,7 +220,7 @@ This filter can be applied to classes or methods using the `[SampleActionFilter]
 
 ## Authorization filters
 
-*Authorization filters* control access to action methods and are the first filters to be executed within the filter pipeline. They have only a before method, unlike most filters that support before and after methods. You should only write a custom authorization filter if you are writing your own authorization framework. Prefer configuring your authorization policies or writing a custom authorization policy over writing a custom filter. The built-in filter implementation is just responsible for calling the authorization system.
+*Authorization filters* control access to action methods and are the first filters to be executed within the filter pipeline. They have only a before method. You should only write a custom authorization filter if you are writing your own authorization framework. Prefer configuring your authorization policies or writing a custom authorization policy over writing a custom filter. The built-in filter implementation is just responsible for calling the authorization system.
 
 Note that you should not throw exceptions within authorization filters, since nothing will handle the exception (exception filters won't handle them). Instead, issue a challenge or find another way.
 
